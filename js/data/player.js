@@ -103,14 +103,10 @@ var playerData = {
       ]
     },
     canShoot:{
-      fps: 30, cycle: true,
+      fps: 5, cycle: true,
       frames:[
         { width: 64, height: 64, startX:384, startY:384},
-        { width: 64, height: 64, startX:448, startY:384},
-        { width: 64, height: 64, startX:0, startY:448},
-        { width: 64, height: 64, startX:64, startY:448},
-        { width: 64, height: 64, startX:128, startY:448},
-        { width: 64, height: 64, startX:192, startY:448},
+        
         
       ]
 

@@ -83,7 +83,7 @@ var shotDelay = 21;
 var currentBullet = 0;
 
 for (let i = 0; i < 100; i++) {
-  bullets[i] = new GameObject({ width: 64, height: 64 }).makeSprite(playerData);
+  bullets[i] = new GameObject({ width: 128, height: 128 }).makeSprite(playerData);
   bullets[i].y = -10000;
   bullets[i].changeState(`canShoot`);
 }
