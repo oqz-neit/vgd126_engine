@@ -59,21 +59,21 @@ var sky = new GameObject({ width: canvas.width, height: canvas.height });
    ✏️ STUDENT EDIT ZONE: SKY BACKDROP
    Swap the image used for the sky pattern (large, subtle textures work well).
    ===================================================================== */
-sky.img.src = `images/sky.png`;
+sky.img.src = `images/night_sky_background.png`;
 
 var rbg = new GameObject({ x: level.x, y: level.y, width: 1024, height: 512 });
 /* =====================================================================
    ✏️ STUDENT EDIT ZONE: REPEATING BACKGROUND LAYER
    Recommended: tileable hill/forest layer that repeats horizontally.
    ===================================================================== */
-rbg.img.src = `images/hills.png`;
+rbg.img.src = `images/town_repeating_background.png`;
 
 var bg = new GameObject({ x: level.x, y: level.y, width: canvas.width * 4, height: canvas.height });
 /* =====================================================================
    ✏️ STUDENT EDIT ZONE: MIDGROUND / DISTANT BACKDROP
    Large scenic layer (non-repeating), e.g., mountains or cityscape.
    ===================================================================== */
-bg.img.src = `images/bgfull.png`;
+bg.img.src = `images/background_test.png`;
 
 // --- Projectiles (pooled) ---
 var bullets = [];
