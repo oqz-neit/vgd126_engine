@@ -26,6 +26,7 @@ var ground = new GameObject({ width: canvas.width * 10, x: canvas.width * 10 / 2
    - Tileable images look best here (seamless repeat).
    ===================================================================== */
 ground.img.src = `images/ground.png`;
+platform.img.src = 'images/platform.png';
 
 // Simple platform
 var plat = new GameObject({ width: 256, height: 64, y: canvas.height - 200, color: "green", world: level });
