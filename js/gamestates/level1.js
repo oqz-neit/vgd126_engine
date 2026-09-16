@@ -19,6 +19,10 @@ wiz.force = 1;
 
 // Ground & platform
 var ground = new GameObject({ width: canvas.width * 10, x: canvas.width * 10 / 2 - 200, height: 64, y: canvas.height - 32, color: "green", world: level });
+//simple platform
+var plat = new GameObject({ width: 256, height: 64, y: canvas.height - 200, color: "green", world: level });
+var leftBorder = new GameObject({ width: 50, height: canvas.height, world: level, x: 0 });
+
 
 /* =====================================================================
    ✏️ STUDENT EDIT ZONE: GROUND TEXTURE
@@ -27,10 +31,6 @@ var ground = new GameObject({ width: canvas.width * 10, x: canvas.width * 10 / 2
    ===================================================================== */
 ground.img.src = `images/ground.png`;
 plat.img.src = `images/platform.png`;
-
-// Simple platform
-var plat = new GameObject({ width: 256, height: 64, y: canvas.height - 200, color: "green", world: level });
-var leftBorder = new GameObject({ width: 50, height: canvas.height, world: level, x: 0 });
 
 // Foreground/Background cave tile grids (+ hit grid for collisions)
 var cave = new Grid(caveData, { world: level, x: 1024, tileHeight: 64, tileWidth: 64 });
