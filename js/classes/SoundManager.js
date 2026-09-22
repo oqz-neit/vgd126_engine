@@ -29,4 +29,6 @@ class SoundManager {
 let soundNodes = document.querySelectorAll(`audio`)
 if (soundNodes.length > 0) var sounds = new SoundManager(soundNodes)
 soundNodes = null
-// document.addEventListener(`click`, () => sounds.play(`splode`, .5))
+
+ document.addEventListener(`attack`, () => sounds.play(`fireball`, .5));
+ document.addEventListener(`jump`, () => sounds.play(`frogjump`, .5));

@@ -25,6 +25,7 @@ var timer = setInterval(animate, interval);
    ===================================================================== */
 gameStates.changeState(`menu`);
 
+
 //-------------------------Animation Loop--------------------------------
 /**
  * Main animation loop — clears the frame and runs the current state.

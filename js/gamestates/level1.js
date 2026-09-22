@@ -80,7 +80,7 @@ bg.img.src = `images/background_test.png`;
 var bullets = [];
 var canShoot = true;
 var shotTimer = 0;
-var shotDelay = 21;
+var shotDelay = 20;
 var currentBullet = 0;
 
 for (let i = 0; i < 100; i++) {
@@ -109,7 +109,7 @@ gameStates[`level1`] = function () {
   }
   if (keys[`W`] && wiz.canJump) {
     wiz.canJump = false; wiz.vy = wiz.jumpHeight; wiz.changeState(`jump`);
-    // sounds.play(`splode`,1)
+     sounds.play(`frogjump`,1)
   }
 
   // Shooting cadence
@@ -118,6 +118,7 @@ gameStates[`level1`] = function () {
   if (keys[` `]) {
     if (canShoot) {
       wiz.changeState(`attack`);
+      sounds.play(`fireball`,0);
       shotTimer = shotDelay;
       bullets[currentBullet].vx = 5 * wiz.dir;
       bullets[currentBullet].world = level;
@@ -127,7 +128,7 @@ gameStates[`level1`] = function () {
       currentBullet++;
       if (currentBullet >= bullets.length) { currentBullet = 0 }
     }
-  } else { shotTimer = 0 }
+  } else { shotTimer = 0; }
 
   // --- Physics integration ---
   wiz.vy += gravity;

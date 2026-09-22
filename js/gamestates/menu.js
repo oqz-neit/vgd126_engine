@@ -31,4 +31,6 @@ gameStates[`menu`] = function () {
 
   menuBackground.drawStaticImage();
   startButton.drawStaticImage();
+
+  sounds.play(`menumusic`, .5);
 };
